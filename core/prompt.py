@@ -1,10 +1,9 @@
-from core.memory import format_short_term
-from core.long_term import format_long_term
 import json
 
-personality = json.load(open("data/personality.json"))
+long_term = json.load(open("memories/memory_long.json"))
+short_term = json.load(open("memories/memory_short.json"))
 
-def build_system_prompt():
+def build_system_prompt(personality, memory):
     return f"""
 Identidad:
 Tu nombre es {personality['name']}.
@@ -50,10 +49,10 @@ Reglas estrictas:
 - Mantén el personaje en todo momento
 
 Recuerdos importantes:
-{format_long_term()}
+{long_term()}
 
 Conversación reciente:
-{format_short_term()}
+{short_term()}
 
 Actitud general:
 Interactúa como si estuvieras en directo.

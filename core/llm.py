@@ -1,5 +1,4 @@
 import requests
-from core.long_term import add_long_term
 
 class LocalLLM:
     def __init__(self, model="mistral"):

@@ -1,7 +1,10 @@
 from core.memory import format_short_term
 from core.long_term import format_long_term
+import json
 
-def build_system_prompt(personality, memory):
+personality = json.load(open("data/personality.json"))
+
+def build_system_prompt():
     return f"""
 Identidad:
 Tu nombre es {personality['name']}.

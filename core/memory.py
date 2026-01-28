@@ -1,7 +1,7 @@
 import json
 
-SHORT = "data/memory_short.json"
-LONG = "data/memory_long.json"
+SHORT = "memory/memory_short.json"
+LONG = "memory/memory_long.json"
 
 def load(path):
     try:
